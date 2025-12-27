@@ -12,26 +12,6 @@
 
 / {
     behaviors {
-        hml: homerow_mods_left {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            quick-tap-ms = <175>;
-            require-prior-idle-ms = <300>;
-            flavor = "balanced";
-            bindings = <&kp>, <&kp>;
-        };
-
-        hmr: homerow_mods_right {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            quick-tap-ms = <175>;
-            require-prior-idle-ms = <300>;
-            flavor = "balanced";
-            bindings = <&kp>, <&kp>;
-        };
-
         td_bs_pipe: backslash_pipe {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
@@ -75,28 +55,28 @@
 
         TXT {
             bindings = <
-                         &kp Q  &mt LEFT_GUI W  &kp F             &kp P       &kp G        &kp J        &kp L        &kp U                      &kp Y        &kp SQT
-                         &kp A  &kp R           &kp S             &kp T       &kp D        &kp H        &kp N        &kp E                      &hmr RALT I  &kp O
-&mt ESCAPE LEFT_BRACKET  &kp Z  &kp X           &kp C             &kp V       &kp B        &kp K        &kp M        &kp COMMA                  &kp DOT      &kp FSLH  &mt RIGHT_ALT RIGHT_BRACKET
-                                                &kp LEFT_CONTROL  &lt 1 BSPC  &lt 3 TAB    &lt 4 ENTER  &lt 2 SPACE  &mt RIGHT_SHIFT BACKSPACE
+                         &kp Q  &kp W  &kp F             &kp P        &kp G        &kp J        &kp L        &kp U                      &kp Y    &kp SQT
+                         &kp A  &kp R  &kp S             &kp T        &kp D        &kp H        &kp N        &kp E                      &kp I    &kp O
+&mt ESCAPE LEFT_BRACKET  &kp Z  &kp X  &kp C             &kp V        &kp B        &kp K        &kp M        &kp COMMA                  &kp DOT  &kp FSLH  &mt RIGHT_ALT RIGHT_BRACKET
+                                       &kp LEFT_CONTROL  &lt 1 SPACE  &lt 2 TAB    &lt 4 ENTER  &lt 4 SPACE  &mt RIGHT_SHIFT BACKSPACE
             >;
         };
 
         ACT {
             bindings = <
-           &kp GRAVE  &kp AT          &kp HASH         &kp SQT          &kp DQT      &kp FSLH   &kp N7         &kp N8         &kp N9        &kp STAR
-           &kp LBKT   &hml LALT RBKT  &hml LSHFT LPAR  &hml LCTRL RPAR  &kp UNDER    &kp MINUS  &hmr RCTRL N4  &hmr RSHFT N5  &hmr RALT N6  &kp PLUS
-&kp CARET  &kp AMPS   &kp PIPE        &kp EXCL         &kp TILDE        &kp DLLR     &kp EQUAL  &kp N1         &kp N2         &kp N3        &kp DOT   &kp PRCNT
-                                      &trans           &trans           &trans       &kp COMMA  &kp N0         &kp BSLH
-            >;
-        };
-
-        nav_layer {
-            bindings = <
         &trans          &msc SCRL_UP    &mmv MOVE_UP    &mkp LCLK        &mkp RCLK          &kp PG_UP  &kp HOME  &kp UP    &kp END    &kp DEL
         &msc SCRL_LEFT  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &msc SCRL_RIGHT    &kp PG_DN  &kp LEFT  &kp DOWN  &kp RIGHT  &kp INS
 &trans  &trans          &msc SCRL_DOWN  &trans          &mkp MB4         &mkp MB5           &trans     &trans    &trans    &kp PSCRN  &kp K_UNDO  &trans
                                         &trans          &kp LSHFT        &kp LCTRL          &trans     &trans    &trans
+            >;
+        };
+
+        SYM {
+            bindings = <
+             &kp CARET  &kp HASH    &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp ASTERISK    &kp EQUAL         &kp N7             &kp N8        &kp N9        &kp GRAVE
+             &kp TILDE  &kp DOLLAR  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp PLUS        &kp MINUS         &kp NUMBER_4       &kp N5        &kp NUMBER_6  &none
+&kp AT_SIGN  &kp AMPS   &kp PIPE    &kp LESS_THAN         &kp GREATER_THAN       &kp PERCENT     &kp SLASH         &kp N1             &kp N2        &kp N3        &kp BACKSLASH  &none
+                                    &trans                &trans                 &trans          &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp NUMBER_0
             >;
         };
 
@@ -109,7 +89,7 @@
             >;
         };
 
-        adj_layer {
+        FUN {
             bindings = <
         &studio_unlock  &kp F7  &kp F8  &kp F9  &kp F12    &trans  &trans        &trans        &trans        &bt BT_CLR_ALL
         &trans          &kp F4  &kp F5  &kp F6  &kp F11    &trans  &bt BT_SEL 3  &bt BT_SEL 4  &trans        &trans
