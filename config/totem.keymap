@@ -64,10 +64,10 @@
 
         ACT {
             bindings = <
-        &kp LG(LEFT)    &kp LG(RIGHT)  &kp LG(LS(LEFT))  &kp LG(LS(RIGHT))  &msc SCRL_UP          &kp PG_UP      &kp LC(LEFT)  &kp UP      &kp LC(RIGHT)  &kp LC(HOME)
-        &sk LEFT_GUI    &kt LEFT_ALT   &kt LEFT_CONTROL  &kt LEFT_SHIFT     &msc SCRL_DOWN        &kp HOME       &kp LEFT      &kp DOWN    &kp RIGHT      &kp END
-&trans  &kp LC(K_UNDO)  &kp LC(X)      &kp LC(C)         &kp LC(V)          &kp LC(LS(K_REDO))    &kp PAGE_DOWN  &trans        &kp ESCAPE  &trans         &kp LC(END)   &kp PRINTSCREEN
-                                       &trans            &trans             &trans                &trans         &trans        &trans
+             &kp LG(LEFT)    &kp LG(RIGHT)  &kp LG(LS(LEFT))  &kp LG(LS(RIGHT))  &msc SCRL_UP          &kp PG_UP      &kp LC(LEFT)  &kp UP      &kp LC(RIGHT)  &kp LC(HOME)
+             &sk LEFT_GUI    &sk LEFT_ALT   &sk LEFT_CONTROL  &sk LEFT_SHIFT     &msc SCRL_DOWN        &kp HOME       &kp LEFT      &kp DOWN    &kp RIGHT      &kp END
+&kp LG(TAB)  &kp LC(K_UNDO)  &kp LC(X)      &kp LC(C)         &kp LC(V)          &kp LC(LS(K_REDO))    &kp PAGE_DOWN  &trans        &kp ESCAPE  &kp TAB        &kp LC(END)   &kp PRINTSCREEN
+                                            &trans            &trans             &trans                &trans         &trans        &trans
             >;
         };
 
