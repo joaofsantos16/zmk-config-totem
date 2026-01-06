@@ -45,17 +45,17 @@
 
         TXT {
             bindings = <
-                       &kp Q  &kp W  &kp F             &kp P        &kp G        &kp J        &kp L                 &kp U          &kp Y    &kp SQT
-                       &kp A  &kp R  &kp S             &kp T        &kp D        &kp H        &kp N                 &kp E          &kp I    &kp O
-&mt LEFT_SHIFT ESCAPE  &kp Z  &kp X  &kp C             &kp V        &kp B        &kp K        &kp M                 &kp COMMA      &kp DOT  &kp FSLH  &mt RIGHT_ALT SEMI
-                                     &kp LEFT_CONTROL  &lt 1 SPACE  &lt 2 TAB    &lt 3 ENTER  &mt LEFT_SHIFT SPACE  &kp BACKSPACE
+                     &kp Q  &kp W  &kp F             &kp P        &kp G        &kp J        &kp L                 &kp U          &kp Y    &kp SQT
+                     &kp A  &kp R  &kp S             &kp T        &kp D        &kp H        &kp N                 &kp E          &kp I    &kp O
+&mt LEFT_ALT ESCAPE  &kp Z  &kp X  &kp C             &kp V        &kp B        &kp K        &kp M                 &kp COMMA      &kp DOT  &kp FSLH  &mt RIGHT_ALT SEMI
+                                   &kp LEFT_CONTROL  &lt 1 SPACE  &lt 2 TAB    &lt 3 ENTER  &mt LEFT_SHIFT SPACE  &kp BACKSPACE
             >;
         };
 
         ACT {
             bindings = <
                       &kp LG(LEFT)  &kp LG(RIGHT)  &kp LG(LC(LEFT))  &kp LG(LC(RIGHT))  &msc SCRL_UP      &kp PG_UP      &kp LC(LEFT)  &kp UP      &kp LC(RIGHT)  &kp LC(HOME)
-                      &sk LEFT_GUI  &sk LEFT_ALT   &sk LEFT_CONTROL  &sk LEFT_SHIFT     &msc SCRL_DOWN    &kp HOME       &kp LEFT      &kp DOWN    &kp RIGHT      &kp END
+                      &kp LEFT_GUI  &sk LEFT_ALT   &sk LEFT_CONTROL  &sk LEFT_SHIFT     &msc SCRL_DOWN    &kp HOME       &kp LEFT      &kp DOWN    &kp RIGHT      &kp END
 &mt LG(TAB) CAPSLOCK  &kp LC(Z)     &kp LC(X)      &kp LC(C)         &kp LC(V)          &kp LC(LS(Z))     &kp PAGE_DOWN  &kp INSERT    &kp ESCAPE  &kp DEL        &kp LC(END)   &mt LS(PRINTSCREEN) PRINTSCREEN
                                                    &trans            &trans             &trans            &trans         &trans        &trans
             >;
